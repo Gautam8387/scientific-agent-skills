@@ -425,6 +425,13 @@ packages = [
     "loompy==3.0.8",
 ]
 
+[skills.scarf-single-cell]
+# The skill documents the Scarf 1.0 pre-releases. A bare `scarf[extra]` resolves to the
+# 0.32 series, whose API differs, so the pin is explicit. Python 3.12 is the minimum the
+# skill documents and the interpreter the suite was run on.
+python = "3.12"
+packages = ["scarf[extra]==1.0.0rc19", "anndata", "numpy", "pandas"]
+
 [skills.cellxgene-census]
 python = "3.12"
 packages = ["cellxgene-census==1.18.0", "tiledbsoma", "tiledbsoma-ml==0.1.0", "scanpy", "spatialdata", "scanorama"]
